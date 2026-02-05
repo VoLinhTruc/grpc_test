@@ -1,0 +1,32 @@
+{
+  "name": "gRPC C++ Development",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": {}
+  },
+  // "image": "grpc/cxx:latest",
+  
+  "runArgs": [
+    "--name=grpc_container"
+  ],
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake",
+        "ms-vscode.makefile-tools",
+        "zxh404.vscode-proto3"
+      ]
+    }
+  },
+  
+  "shutdownAction": "stopContainer",
+  
+  "postCreateCommand": "echo 'gRPC C++ Development Container Ready'",
+  
+  "remoteUser": "root"
+}
