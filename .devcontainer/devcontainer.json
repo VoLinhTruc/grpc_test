@@ -1,11 +1,11 @@
 {
   "name": "gRPC C++ Development",
+  // Build the dev container from the local Dockerfile (which pulls the pre-built GHCR image)
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".",
     "args": {}
   },
-  // "image": "grpc/cxx:latest",
   
   "runArgs": [
     "--name=grpc_container"
