@@ -1,0 +1,387 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clean-vnv" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="VnV Approaches Comparison" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="700" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftBox" value="Current VnV Approach&lt;br/&gt;FMU (monolithic)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="560" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftFlow" value="Flow" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="60" y="170" width="560" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftFlowText" value="SW under test → VnV_Config → config.yaml → FMU Build → CoSym Environment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;" vertex="1" parent="leftFlow">
+          <mxGeometry x="10" y="10" width="540" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftProsCons" value="Pros:&lt;br/&gt;- Standardized (FMI)&lt;br/&gt;- Broad tool support (Simulink, Modelica, Dymola, FMPy, dSPACE, Vector, ETAS)&lt;br/&gt;&lt;br/&gt;Cons:&lt;br/&gt;- High cost&lt;br/&gt;- Weak CI/CD support&lt;br/&gt;- Hard to expand&lt;br/&gt;- Hard to debug (black-box)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="560" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightBox" value="SDV Approach&lt;br/&gt;Container (Microservices)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="780" y="90" width="560" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightFlow" value="Flow" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="780" y="170" width="560" height="220" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightFlowText" value="SW under test → Protobuf + gRPC services → Docker image / devContainer → vECU container → Tester interface + Scheduler → Orchestrator&lt;br/&gt;&lt;br/&gt;All components communicate via gRPC on the same network." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;" vertex="1" parent="rightFlow">
+          <mxGeometry x="10" y="10" width="540" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightProsCons" value="Pros:&lt;br/&gt;- Low cost&lt;br/&gt;- Strong CI/CD/CT support&lt;br/&gt;- Highly scalable&lt;br/&gt;- White-box debugging&lt;br/&gt;- Can integrate FMU&lt;br/&gt;&lt;br/&gt;Cons:&lt;br/&gt;- Not fully standardized" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="410" width="560" height="170" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="roadmap" value="Roadmap (Stages)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="1280" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="stageText" value="1) Build simple SW + proto + gRPC client&lt;br/&gt;2) Replace with real SW (e.g., HONDA PKlib)&lt;br/&gt;3) Automate build + create testing app with auto-populated UI from proto&lt;br/&gt;4) Auto-test container with predefined actions/expectations&lt;br/&gt;5) Compose to manage containers&lt;br/&gt;6) Refine project structure&lt;br/&gt;7) AI guidance for auto-tests on PR/Push" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#ffffff;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="60" y="670" width="1280" height="180" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile><mxfile host="app.diagrams.net">
+  <diagram id="clean-vnv" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="VnV Approaches Comparison" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="700" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Left Column: FMU Approach -->
+        <mxCell id="leftBox" value="Current VnV Approach\nFMU (monolithic)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="560" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftFlow" value="Flow" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="60" y="170" width="560" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftFlowText" value="SW under test → VnV_Config → config.yaml → FMU Build → CoSym Environment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;" vertex="1" parent="leftFlow">
+          <mxGeometry x="10" y="10" width="540" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leftProsCons" value="Pros:\n- Standardized (FMI)\n- Broad tool support (Simulink, Modelica, Dymola, FMPy, dSPACE, Vector, ETAS)\n\nCons:\n- High cost\n- Weak CI/CD support\n- Hard to expand\n- Hard to debug (black-box)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="560" height="210" as="geometry"/>
+        </mxCell>
+
+        <!-- Right Column: SDV Approach -->
+        <mxCell id="rightBox" value="SDV Approach\nContainer (Microservices)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="780" y="90" width="560" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightFlow" value="Flow" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="780" y="170" width="560" height="220" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightFlowText" value="SW under test → Protobuf + gRPC services → Docker image / devContainer → vECU container → Tester interface + Scheduler → Orchestrator\n\nAll components communicate via gRPC on the same network." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;" vertex="1" parent="rightFlow">
+          <mxGeometry x="10" y="10" width="540" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rightProsCons" value="Pros:\n- Low cost\n- Strong CI/CD/CT support\n- Highly scalable\n- White-box debugging\n- Can integrate FMU\n\nCons:\n- Not fully standardized" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="780" y="410" width="560" height="170" as="geometry"/>
+        </mxCell>
+
+        <!-- Roadmap -->
+        <mxCell id="roadmap" value="Roadmap (Stages)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="1280" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="stageText" value="1) Build simple SW + proto + gRPC client\n2) Replace with real SW (e.g., HONDA PKlib)\n3) Automate build + create testing app with auto-populated UI from proto\n4) Auto-test container with predefined actions/expectations\n5) Compose to manage containers\n6) Refine project structure\n7) AI guidance for auto-tests on PR/Push" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fillColor=#ffffff;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="60" y="670" width="1280" height="180" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile><mxfile host="65bd71144e">
+    <diagram id="M9C5G-Hi2xEoeg44mbaE" name="Page-1">
+        <mxGraphModel dx="1840" dy="3920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;fontSize=20;endArrow=classic;endFill=1;" edge="1" parent="1" source="3" target="78">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="3680" y="210" width="1680" height="700" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="3760" y="-790" width="1550" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;span&gt;Same network&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="4810" y="340" width="370" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="3940" y="-410" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;horizontal=0;align=left;" vertex="1" parent="6">
+                    <mxGeometry width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="SWC/App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="10" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="90" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="170" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="10" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="90" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;span&gt;...&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="170" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="SW under tested" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6">
+                    <mxGeometry x="90" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="16" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;VnV_Config:&lt;/b&gt;&lt;br&gt;1. VnV create variable to interfact with CoSym.&lt;br&gt;2. VnV create fucntions that are executed base on the value inputted by CoSym test interface&lt;br&gt;3. VnV create Simulation fucntions (Init, cyclic) that are called by CoSym" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="3840" y="-580" width="400" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.552;entryY=1.039;entryDx=0;entryDy=0;startArrow=classic;startFill=1;entryPerimeter=0;" edge="1" parent="1" source="7" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="19" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;b&gt;VnV Prepare the config.yaml file:&lt;/b&gt;&lt;br&gt;&lt;b&gt;config.yaml&lt;/b&gt;&amp;nbsp;let the CoSym Builder know how to build the &lt;b&gt;SW_under_test &lt;/b&gt;+ &lt;b&gt;VnV_Config&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="4340" y="-490" width="240" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.692;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="7" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="22" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;b&gt;FMU&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="4750" y="-470" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Build" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="4630" y="-460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;b&gt;CoSym enviroment:&lt;/b&gt;&lt;br&gt;&lt;br&gt;All the&amp;nbsp;&lt;b&gt;VnV_Config &lt;/b&gt;variable&amp;nbsp;(input and output are shown here)&lt;br&gt;&lt;br&gt;Tester execute the action via the&amp;nbsp;&lt;b&gt;VnV_Config&lt;/b&gt;&amp;nbsp;input variable and monitor the&amp;nbsp;&lt;b&gt;VnV_Config&amp;nbsp;&lt;/b&gt;output variable (the ouput variable reflect the output variable of the source code)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4970" y="-540" width="210" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Import" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="4880" y="-460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Current VnV Approach&lt;br&gt;FMU (monolithic)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="3840" y="-690" width="330" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="SDV approach&lt;br&gt;Container (Micro services)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="3770" y="420" width="390" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;b&gt;Pros:&lt;/b&gt;&lt;br&gt;- Standadize (FMI)&lt;br&gt;- Multiple tools support:&amp;nbsp;Simulink, Modelica, OpenModelica, Dymola, FMPy, dSPACE, Vector, ETAS&lt;br&gt;&lt;br&gt;&lt;b&gt;Cons:&lt;/b&gt;&lt;br&gt;- High cost&lt;br&gt;- Not support CI/CD/CT natively&lt;br&gt;- Hard to expand&lt;br&gt;- Hard to achieving seamless communication between virtual ECUs and embedded ECUs&lt;br&gt;- &lt;b&gt;BlackBox&lt;/b&gt;, Very hard to debug" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="4340" y="-750" width="240" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b&gt;Pros:&lt;/b&gt;&lt;br&gt;- Low cost&lt;br&gt;- Strong CI/CD/CT&amp;nbsp;support&lt;br&gt;- Strong expand ability&lt;br&gt;- Be able to achieving seamless communication between virtual ECUs and embedded ECUs&lt;br&gt;- Possible to test multiple vECU&lt;br&gt;- &lt;b&gt;WhiteBox&lt;/b&gt;, Easy to debugging and monitoring even monitoring multiple vECU at a time&lt;br&gt;- &lt;b&gt;Possible to integrate FMU&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Cons:&lt;/b&gt;&lt;br&gt;- Not fully Standadize&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="4300" y="250" width="240" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="32" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="32" target="48">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="3770" y="520" width="500" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="3890" y="720" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;horizontal=0;align=left;" vertex="1" parent="33">
+                    <mxGeometry width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="SWC/App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="10" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="90" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="170" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="10" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;span&gt;SWC/App&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="90" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;span&gt;...&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="33">
+                    <mxGeometry x="170" y="90" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="SW under tested" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="33">
+                    <mxGeometry x="90" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;b&gt;VnV_Config:&lt;/b&gt;&lt;br&gt;1. &lt;b&gt;Protobuf &lt;/b&gt;to declare the in/out interface of the SW_Under_test, the Scheduling services&lt;br&gt;2. Build the protobuf file&lt;br&gt;3. implement the RGP services to trigger theSW_Under_test&amp;nbsp;in/out interfaces&lt;br&gt;3. implement the RGP services&amp;nbsp;for scheduling services, they provide the mean to execute the scheduling function in the SW_Under_test" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="3810" y="540" width="400" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="41" target="42">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="4030.0023456790123" y="695.71" as="sourcePoint"/>
+                        <mxPoint x="4030.79" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="45" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Docker image /&amp;nbsp;&lt;span style=&quot;&quot;&gt;devContainer&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="4640" y="725" width="150" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Docker image buid&amp;nbsp; or&lt;br&gt;Provide as the devContainer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="4280" y="660" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startArrow=none;startFill=0;" edge="1" parent="1" source="48" target="52">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;span style=&quot;text-align: left&quot;&gt;protobuf file&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="4640" y="540" width="150" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="vECU container on local / cloud" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4900" y="727.5" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Run" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="4835" y="740" width="65" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startArrow=classic;startFill=1;" edge="1" parent="1" source="52" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Tester interface container:&lt;br&gt;Interface for tester to control / monitor the vECU status&lt;br&gt;&lt;br&gt;This contain vECU scheduler container:&lt;br&gt;By calling the scheduling service in specific time" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4900" y="480" width="170" height="142.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="gRPC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="4980" y="660" width="65" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="gRPC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="5070" y="622.5" width="65" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Orschestrator" style="rounded=0;whiteSpace=wrap;html=1;align=center;horizontal=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="5210" y="560" width="130" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="55" target="52">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="5220" y="570" as="sourcePoint"/>
+                        <mxPoint x="5080" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="1:m" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="56">
+                    <mxGeometry x="-0.7294" relative="1" as="geometry">
+                        <mxPoint x="-36" y="-7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=1.015;entryY=0.105;entryDx=0;entryDy=0;dashed=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="55" target="49">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="5220" y="602.5" as="sourcePoint"/>
+                        <mxPoint x="5080" y="592.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="1:m" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="58">
+                    <mxGeometry x="-0.7209" y="-3" relative="1" as="geometry">
+                        <mxPoint x="-34" y="32" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;Stage 1:&lt;/b&gt;&lt;br&gt;1.Create a simple SW_under_test which has the Scheduling functions, in/out interfaces and services (including Scheduling functions)&lt;br&gt;&lt;br&gt;2. Create protobuf file to describe the SW_under_test interfaces and services&lt;br&gt;&lt;br&gt;3. Build the protobuf file and implement the generated grpc services to wrap the SW_under_test interface and services&lt;br&gt;&lt;br&gt;4. Successfully Build the SW_under_test + protobuf&amp;nbsp;stuffer -&amp;gt; this is the vECU&lt;br&gt;&lt;br&gt;5. Create the simple grpc Client to interact with the created vECU" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="3770" y="965" width="340" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;Stage 2:&lt;/b&gt;&lt;br&gt;1. Replace the simple SW_under_test by the SW needed to be test (HONDA PKlib as a nominated)&lt;br&gt;&lt;br&gt;2. Similar to Stage 1&lt;br&gt;&lt;br&gt;3. Similar to Stage 1&lt;br&gt;&lt;br&gt;4. Similar to Stage 1&lt;br&gt;&lt;br&gt;5. Create the grpc Client to interact with the created vECU,&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4220" y="965" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;Stage 3:&lt;/b&gt;&lt;br&gt;1.Automate the Steps 2-3-4 to build the vECU&amp;nbsp;&lt;br&gt;&lt;br&gt;2. Create the Testing-App&lt;br&gt;2.1 The tester can trigger vECU grpc service and show the response&lt;br&gt;2.2 The vECU interface is automatically poplated to the Test-App window from the proto file" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4640" y="965" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;b&gt;Stage 4:&lt;/b&gt;&lt;br&gt;1. Create a Auto-Test container to test the vECU automatically with the pre-defined Test Action and Test Expectation (defined by the tester)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="3770" y="1277.5" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;b&gt;Stage 5:&lt;/b&gt;&lt;br&gt;1. Create the Compose to manage all container" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4220" y="1277.5" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="&lt;b&gt;Stage 6:&lt;/b&gt;&lt;br&gt;1. Refine the project structure" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4640" y="1277.5" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="&lt;b&gt;Stage 7:&lt;/b&gt;&lt;br&gt;1. Prepare the Guidance for AI to automate analyze the requirement and create the test&amp;nbsp; then auto run the test on every PR/Push" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="3770" y="1610" width="320" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;These 2 methods has the same goals:&lt;br&gt;1. Create the enviroment to run the SW under test&lt;br&gt;2. Provide the method to link the SW under test with the&amp;nbsp;enviroment created above&lt;br&gt;3. Has debugging ability&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="3795" y="-40" width="290" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=0.127;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4" target="67">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3945" y="-10" as="sourcePoint"/>
+                        <mxPoint x="4100" y="40" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endFill=1;" edge="1" parent="1" source="3" target="67">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3955" y="80" as="sourcePoint"/>
+                        <mxPoint x="3970" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="1. The enviroment provides:&lt;br&gt;1.1 the ability to Run the&amp;nbsp;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;SW under test&lt;/span&gt;&lt;br&gt;1.2 the interface to interfact (control, monitor the&amp;nbsp;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;SW under test status aka variable)&lt;br&gt;1.3 provide the tool to log, analyze,... the running result&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4740" y="-190" width="340" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;2. the method to link the&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;SW under test with the enviroment&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;2.1 Cosym use the yaml file&lt;br&gt;2.2 SDV vECU use the proto file. &lt;br&gt;Reason:&lt;br&gt;- prtoto is major widely used&lt;br&gt;- &lt;b&gt;easy for protable&lt;/b&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4690" y="-70" width="390" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;" edge="1" parent="1" source="67" target="70">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3966.8499999999995" y="3.480000000000018" as="sourcePoint"/>
+                        <mxPoint x="3959.231431692152" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="67" target="71">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="4099.999999999999" y="112.14285714285734" as="sourcePoint"/>
+                        <mxPoint x="4729.999999999999" y="67.14285714285734" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.536;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="71" target="19">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="4099.999999999999" y="143.75" as="sourcePoint"/>
+                        <mxPoint x="4639.999999999999" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="71" target="48">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="4639.999999999999" y="120" as="sourcePoint"/>
+                        <mxPoint x="4478.639999999999" y="-149.74" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;3. debug ability&lt;br&gt;3.1 Cosym use Visual Studio: high cost&lt;br&gt;3.2 We use the available gbd with VSCode that are &lt;b&gt;No/low cost&lt;/b&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="4270" y="60" width="390" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="67" target="76">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="3966.8500000000004" y="-196.51999999999998" as="sourcePoint"/>
+                        <mxPoint x="3953.426107549517" y="-30" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;Benifit:&lt;br style=&quot;font-size: 20px;&quot;&gt;&lt;/b&gt;1. reduce cost&lt;br style=&quot;font-size: 20px;&quot;&gt;2. improve competence which is match the market demand (containerize, grpc, linux,...)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="5210" y="1020" width="410" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

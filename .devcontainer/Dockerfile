@@ -1,11 +1,6 @@
 # Use the specified base image
 FROM ghcr.io/volinhtruc/bico_ubuntu:22.04_0.0.0
 
-ENV HTTP_PROXY=http://host.docker.internal:3128
-ENV HTTPS_PROXY=http://host.docker.internal:3128
-ENV http_proxy=http://host.docker.internal:3128
-ENV https_proxy=http://host.docker.internal:3128
-
 # Install build essentials and dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \

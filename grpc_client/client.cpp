@@ -40,7 +40,7 @@ class GreeterClient {
 
 int main(int argc, char** argv) {
   GreeterClient greeter(grpc::CreateChannel(
-      "localhost:50051", grpc::InsecureChannelCredentials()));
+      "127.0.0.1:50051", grpc::InsecureChannelCredentials()));
   std::string user = "world";
   if (argc > 1) user = argv[1];
   
