@@ -38,7 +38,6 @@ jobs:
         file: Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ env.OWNER_LOWER }}/grpc_test:latest
-          ghcr.io/${{ env.OWNER_LOWER }}/grpc_test:${{ github.sha }}
+          ghcr.io/${{ env.OWNER_LOWER }}/grpc_test:22.04_0.0.0
         cache-from: type=gha
         cache-to: type=gha,mode=max

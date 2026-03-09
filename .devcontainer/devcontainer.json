@@ -4,7 +4,9 @@
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".",
-    "args": {}
+    "args": {
+      "USER": "developer",
+    }
   },
   
   "runArgs": [
