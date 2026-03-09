@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(grpc_test)
 
-find_package(Protobuf REQUIRED)
+find_package(Protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 
 # Generate proto files
